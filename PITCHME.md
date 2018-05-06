@@ -8,6 +8,7 @@
 - Some of my techniques and methods may be older/outdated. I am old. |
 - There are going to be somethings that I miss out on (arrays) either on purpose or by accident. |
 
++++
 ### Notes
 - I would like to have built a usable script but did not have time so: |
 - Hopefully my examples will be easily modified to fit your needs |
