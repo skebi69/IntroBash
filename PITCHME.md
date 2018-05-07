@@ -23,17 +23,28 @@
 
 +++
 ### Topics (Cont)
--   Conditional handling
-    -   if statement
-    -   if else
-    -   if elif
-    -   case
--   Select/case text menu
+-   Conditional handling |
+    -   if statement |
+    -   if else |
+    -   if elif |
+    -   case |
+-   Select/case text menu |
 
 +++
 ### Topics (Cont)
--   Loops
-    -   for
-    -   while
-    -   until
--   Functions
+-   Loops |
+    -   for |
+    -   while |
+    -   until |
+-   Functions |
+
+---
+### Why Script?
+-   Run series of commands |
+-   Build a long, complicated command |
+-   Run commands that depend on specific conditions/results |
+-   Run repetitive commands |
+-   A lazy sysadmin is a good sysadmin - Let your scripts do the work for you
+
+---
+### She bang (#!)
