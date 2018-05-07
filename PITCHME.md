@@ -70,7 +70,11 @@
 -   read <options> variable
     -   Options
     -   -p - Prompt
-`read -p "Enter password:" PASSWORD`
+```bash
+read -p "Enter password:" PASSWORD
+```
     -   -s - Suppress output
-`echo "Enter password"
- read -s PASSWORD`
+```bash
+echo "Enter password"
+read -s PASSWORD
+```
