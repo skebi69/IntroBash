@@ -71,10 +71,10 @@
     -   Options
     -   -p - Prompt
 ```bash
-read -p "Enter password:" PASSWORD
+read -p "Enter password:" PASSW
 ```
     -   -s - Suppress output
 ```bash
 echo "Enter password"
-read -s PASSWORD
+read -s PASSW
 ```
