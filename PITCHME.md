@@ -70,13 +70,36 @@
 -   read <options> variable
     -   Options
     -   -p - Prompt
-```
+``BASH
 read -p "Enter password:" PASSW
-
 ```
     -   -s - Suppress output
-
-```
+```bash
 echo "Enter password"
 read -s PASSW
 ```
+
+---
+### Conditional Handling
+if statement
+
+if else
+
+if elif
+
+case
+
+---
+### select case to create menus
+
+
+---
+### Loops
+for
+
+while
+
+until
+
+---
+### Functions
