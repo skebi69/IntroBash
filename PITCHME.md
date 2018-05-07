@@ -44,7 +44,7 @@
 -   Build a long, complicated command |
 -   Run commands that depend on specific conditions/results |
 -   Run repetitive commands |
--   A lazy sysadmin is a good sysadmin - Let your scripts do the work for you
+-   A lazy sysadmin is a good sysadmin - Let your scripts do the work for you |
 
 ---
 ### She bang (#!)
@@ -70,7 +70,7 @@
 -   read <options> variable
     -   Options
     -   -p - Prompt
-    -   `read -p "Enter password:" PASSWORD`
+        `read -p "Enter password:" PASSWORD`
     -   -s - Suppress output
-    -   `echo "Enter password"
-    -   read -s PASSWORD`
+        `echo "Enter password"
+        read -s PASSWORD`
