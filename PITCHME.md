@@ -17,7 +17,7 @@ https://gitpitch.com/skebi69/IntroBash
 ---
 ### Topics
 -   Why script? |
--   She Bang - Not Ricky Martin (see - I told you I was old) |
+-   She-Bang - Not Ricky Martin (see - I told you I was old) |
 -   Variables |
 -   Special variables |
 -   User input |
@@ -49,8 +49,8 @@ https://gitpitch.com/skebi69/IntroBash
 
 ---
 ### She bang (#!)
--   Start every script to set interpreter
--   #!/bin/bash
+-   Start every script to set interpreter |
+-   #!/bin/bash |
 
 ---
 ### Variables
