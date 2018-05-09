@@ -54,23 +54,23 @@ https://gitpitch.com/skebi69/IntroBash
 
 ---
 ### Variables
--   A temporary store for small pieces of information
--   No need to declare
--   Can contain any type of data - String, integer, float, etc
+-   A temporary store for small pieces of information |
+-   No need to declare |
+-   Can contain any type of data - String, integer, float, etc |
 
 ---
 ### Special variables
--   $? - Exit code of last command
--   $0 - Script name
--   $1 - $N - Option 1 to whatever
--   $$ - PID of script
+-   $? - Exit code of last command |
+-   $0 - Script name |
+-   $1 - $N - Option 1 to whatever |
+-   $$ - PID of script |
 
 ---
 ### User input
--   read command
--   read <options> variable
-    -   Options
-    -   -p - Prompt
+-   read command |
+-   read <options> variable |
+    -   Options |
+    -   -p - Prompt |
 ``BASH
 read -p "Enter password:" PASSW
 ```
