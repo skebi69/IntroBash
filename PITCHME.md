@@ -1,6 +1,6 @@
-# Intro to BASH Shell Scripting
-## John Kennedy
-### skebi69@gmail.com
+## Intro to BASH Shell Scripting
+### John Kennedy
+#### skebi69@gmail.com
 https://gitpitch.com/skebi69/IntroBash
 
 ---
