@@ -61,11 +61,11 @@ Source: https://github.com/skebi69/IntroBash
 ---
 ### User input
 #### Syntax
-```
+```bash
 read command
 ``` 
 
-```
+```bash
 read <options> variable
 ``` 
 
