@@ -48,8 +48,12 @@ Source: https://github.com/skebi69/IntroBash
 -   A temporary store for small pieces of information |
 -   No need to declare |
 -   Can contain any type of data - String, integer, float, etc |
--   Arrays (not covered today) |
+-   Good practice to surround with curly braces "{}" |
+-   Like file names, try and avoid spaces in variables where possible |
+
+### Other types of variables
 -   Special variables |
+-   Arrays (not covered today) |
 
 +++
 ### Special variables
@@ -57,6 +61,7 @@ Source: https://github.com/skebi69/IntroBash
 -   $0 - Script name |
 -   $1 - $N - Option 1 to whatever |
 -   $$ - PID of script |
+-   $IFS - Internal field separator - Normally set to whitespace
 
 ---
 ### User input
@@ -100,17 +105,19 @@ The read command can be used to stop a script at certain points for debugging. I
 ### if statement
 *  Uses a test with a binary output to determine path to take
 -  Syntax
-   - if [[ test condition ]]
-     then
-     Do lots of stuff
-     fi
+```bash
+if [[ test condition ]]
+then
+  Do lots of stuff
+fi
+```
 
 +++
 ### Example of use
 ```bash
 grep Hello *
 ANSW=$?
-if [[ $ANSW -lt 1 ]]
+if [[ $i{ANSW} -lt 1 ]]
 then
   echo "The command worked"
 fi
