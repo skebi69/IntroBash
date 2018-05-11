@@ -62,7 +62,7 @@ Source: https://github.com/skebi69/IntroBash
 ### User input
 #### Syntax
 ```bash
-read command
+read variable
 ``` 
 
 ```bash
@@ -84,6 +84,8 @@ echo "Enter password "
 read -s PASSW
 ```
 
+Note:
+The read command can be used to stop a script at certain points for debugging. I usually use the variable "dummyvar" so I know at a glance what the read is for.
 ---
 ### Conditional Handling
 *  if statement |
