@@ -51,6 +51,7 @@ Source: https://github.com/skebi69/IntroBash
 -   Good practice to surround with curly braces "{}" |
 -   Like file names, try and avoid spaces in variables where possible |
 
++++
 ### Other types of variables
 -   Special variables |
 -   Arrays (not covered today) |
@@ -61,7 +62,7 @@ Source: https://github.com/skebi69/IntroBash
 -   $0 - Script name |
 -   $1 - $N - Option 1 to whatever |
 -   $$ - PID of script |
--   $IFS - Internal field separator - Normally set to whitespace
+-   $IFS - Internal field separator - Normally set to whitespace |
 
 ---
 ### User input
@@ -111,6 +112,9 @@ then
   Do lots of stuff
 fi
 ```
+@[1-2](The if statement and condition it is looking for)
+@[3](If the condition is true, run this command)
+@[4](Close out the if statement)
 
 +++
 ### Example of use
@@ -130,6 +134,40 @@ fi
 @[6](Close out the if statement)
 +++
 ### if else statement
+*  Uses a test with a binary output to determine path to take
+-  Syntax
+```bash
+if [[ test condition ]]
+then
+  Do lots of stuff
+else
+  Do different stuff
+fi
+```
+@[1-2](The if statement and condition it is looking for)
+@[3](If the condition is true, run this command)
+@[4-5](If the statement is false, do this stuff)
+@[6](Close out the if statement)
+
++++
+### Example of use
+```bash
+grep Hello *
+ANSW=$?
+if [[ $i{ANSW} -lt 1 ]]
+then
+  echo "The command worked"
+else
+  echo "I can't find Hello anywhere"
+fi
+```
+
+@[1](The command you are testing output from)
+@[2](Special variables can be very volitile so I usually create a "disposable" variable to hold them)
+@[3-4](The if statement and condition it is looking for)
+@[5](If the condition is true, run this command)
+@[6-7](If the condition is NOT true, run this command)
+@[8](Close out the if statement)
 
 +++
 ### if elif statement
