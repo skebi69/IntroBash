@@ -70,6 +70,7 @@ Source: https://github.com/skebi69/IntroBash
 
 ---
 ### User input
+#### Syntax
 ```
 read command
 ``` 
