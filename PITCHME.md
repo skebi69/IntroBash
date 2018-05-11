@@ -2,6 +2,7 @@
 ### John Kennedy
 #### skebi69@gmail.com
 https://gitpitch.com/skebi69/IntroBash
+https://github.com/skebi69/IntroBash
 
 ---
 ### Disclaimer
