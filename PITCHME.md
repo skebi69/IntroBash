@@ -75,14 +75,16 @@ Source: https://github.com/skebi69/IntroBash
    ```read <options> variable``` 
 
 Options 
+
     -p - Prompt 
-```BASH
+
+```
 read -p "Enter password:" PASSW
 ```
 
     -s - Suppress output
 
-```bash
+```
 echo "Enter password"
 read -s PASSW
 ```
