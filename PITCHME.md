@@ -61,7 +61,7 @@ Source: https://github.com/skebi69/IntroBash
 -   Arrays (not covered today) |
 -   Special variables |
 
----
++++
 ### Special variables
 -   $? - Exit code of last command |
 -   $0 - Script name |
@@ -70,15 +70,17 @@ Source: https://github.com/skebi69/IntroBash
 
 ---
 ### User input
-   ```read command``` |
-   ```read <options> variable``` |
-Options |
-       -p - Prompt |
+   ```read command``` 
+
+   ```read <options> variable``` 
+
+Options 
+    -p - Prompt 
 ```BASH
 read -p "Enter password:" PASSW
 ```
 
-       -s - Suppress output
+    -s - Suppress output
 
 ```bash
 echo "Enter password"
