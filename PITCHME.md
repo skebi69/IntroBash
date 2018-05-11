@@ -78,7 +78,7 @@ read command
 read <options> variable
 ``` 
 
-- Options 
+#### Options 
 
   -p - Prompt 
 
