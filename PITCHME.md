@@ -58,6 +58,8 @@ Source: https://github.com/skebi69/IntroBash
 -   A temporary store for small pieces of information |
 -   No need to declare |
 -   Can contain any type of data - String, integer, float, etc |
+-   Arrays (not covered today) |
+-   Special variables |
 
 ---
 ### Special variables
@@ -83,13 +85,22 @@ read -s PASSW
 
 ---
 ### Conditional Handling
-if statement
+*  if statement |
 
-if else
+*  if else |
 
-if elif
+*  if elif |
 
-case
+*  case |
+
++++
+### if statements
+*  Uses a test with a binary output to determine path to take
+-  Syntax
+   - if [[ test condition ]]
+     then
+     Do lots of stuff
+     fi
 
 ---
 ### select case to create menus
