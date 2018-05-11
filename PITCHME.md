@@ -70,14 +70,14 @@ Source: https://github.com/skebi69/IntroBash
 
 ---
 ### User input
--   ```read command``` |
--   ```read <options> variable``` |
-    -   Options |
-    -   -p - Prompt |
+   ```read command``` |
+   ```read <options> variable``` |
+Options |
+       -p - Prompt |
 ```BASH
 read -p "Enter password:" PASSW
 ```
-    -   -s - Suppress output
+       -s - Suppress output
 ```bash
 echo "Enter password"
 read -s PASSW
