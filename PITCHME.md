@@ -26,18 +26,8 @@ Source: https://github.com/skebi69/IntroBash
 +++
 ### Topics (Cont)
 -   Conditional handling |
-    -   if statement |
-    -   if else |
-    -   if elif |
-    -   case |
 -   Select/case text menu |
-
-+++
-### Topics (Cont)
 -   Loops |
-    -   for |
-    -   while |
-    -   until |
 -   Functions |
 
 ---
