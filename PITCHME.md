@@ -97,13 +97,38 @@ The read command can be used to stop a script at certain points for debugging. I
 *  case |
 
 +++
-### if statements
+### if statement
 *  Uses a test with a binary output to determine path to take
 -  Syntax
    - if [[ test condition ]]
      then
      Do lots of stuff
      fi
+
++++
+### Example of use
+```bash
+grep Hello *
+ANSW=$?
+if [[ $ANSW -lt 1 ]]
+then
+  echo "The command worked"
+fi
+```
+
+@[1](The command you are testing output from)
+@[2](Special variables can be very volitile so I usually create a "disposable" variable to hold them)
+@[3-4](The if statement and condition it is looking for)
+@[5](If the condition is true, run this command)
+@[6](Close out the if statement)
++++
+### if else statement
+
++++
+### if elif statement
+
++++
+### case statement
 
 ---
 ### select case to create menus
