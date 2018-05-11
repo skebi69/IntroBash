@@ -1,2 +1,2 @@
 # My Intro to BASH Shell Scripting Presentation
-Source: https://github.com/skebi69/IntroBash
+Presentation: https://gitpitch.com/skebi69/IntroBash
