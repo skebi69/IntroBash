@@ -77,7 +77,9 @@ Options |
 ```BASH
 read -p "Enter password:" PASSW
 ```
+
        -s - Suppress output
+
 ```bash
 echo "Enter password"
 read -s PASSW
