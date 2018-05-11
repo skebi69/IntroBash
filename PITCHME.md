@@ -70,22 +70,26 @@ Source: https://github.com/skebi69/IntroBash
 
 ---
 ### User input
-   ```read command``` 
+```
+read command
+``` 
 
-   ```read <options> variable``` 
+```
+read <options> variable
+``` 
 
 #### Options 
 
 #####    -p - Prompt 
 
 ```
-read -p "Enter password:" PASSW
+read -p "Enter password: " PASSW
 ```
 
 #####    -s - Suppress output
 
 ```
-echo "Enter password"
+echo "Enter password "
 read -s PASSW
 ```
 
