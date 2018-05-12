@@ -213,7 +213,6 @@ fi
 +++
 ### case statement
 *  Gives several different paths depending on the results of a single condition
-*  Can replace (and better than) nested if statements
 ```bash
 case <expression> in
   case1)
@@ -232,6 +231,9 @@ esac
 @[5-7](The second clause. "break" is needed to prevent endless case loop. ";;" terminates the clause)
 @[8-10](The "catch all" clause. This happens if none of the other clauses match)
 @[11](Close your case statement)
+
+Note:
+Can replace (and better than) nested if statements
 
 +++
 ### Example of use
@@ -269,9 +271,33 @@ esac
 @[15-18](Stanza 4)
 @[19-22](Stanza 5 - Catch all)
 @[23](Close case)
+
 +++
 ### select case to create menus
+*   Allows menus in your script
+-   Syntax
+```bash
+select <variable> in <list>
+do
+  case $<variable in
+    case1)
+      break
+      ;;
+    case2)
+      break
+      ;;
+    *)
+      break
+      ;;
+  esac
+done
 
+@[1-2](select statement with variable and list)
+@[3](The case statement using the select variable)
+@[4-6](The first clause. The result of menu number 1)
+@[7-9](The second clause. The result of menu number 2)
+@[10-12](The "catch all" clause. This happens if the user picks a non choice)
+@[13](Close your case statement)
 
 ---
 ### Loops
