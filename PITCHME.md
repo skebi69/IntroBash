@@ -205,7 +205,7 @@ fi
 ```
 
 @[1](Setting a variable)
-@[2-4](The if statement and condition it is looking for and what to do if true)
+@[2-4](The if statement and condition it is looking for, and what to do if true)
 @[5-6](The second statement and what to do if true)
 @[7-8](If the first two conditions are NOT true, run this command)
 @[9](Close out the if statement)
@@ -214,7 +214,6 @@ fi
 ### case statement
 *  Gives several different paths depending on the results of a single condition
 *  Can replace (and better than) nested if statements
--  Syntax
 ```bash
 case <expression> in
   case1)
