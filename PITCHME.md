@@ -80,18 +80,43 @@ read <options> variable
   -p - Prompt 
 
 ```
-read -p "Enter password: " PASSW
+read -p "Enter a number: " NUM
+echo ${NUM}
 ```
 
-  -s - Suppress output
+  -s - Supress output
 
 ```
 echo "Enter password "
 read -s PASSW
+echo "${PASSW}"
 ```
 
 Note:
 The read command can be used to stop a script at certain points for debugging. I usually use the variable "dummyvar" so I know at a glance what the read is for.
+
++++
+### A read example
+```bash
+echo "Enter your new password: "
+read -s PASSWD1
+echo "Enter your password again: "
+read -s PASSWD2
+if [[ ${PASSWD1} == ${PASSWD2} ]]
+then
+  PASSWD=$PASSWD
+  echo "Your password has been saved"
+else
+  echo "The two passwords do not match, start over..."
+fi
+```
+@[1-2](Ask for password but supress output from user)
+@[3-4](Ask user to repeat and supress)
+@[5-6](if statement to make sure passwords match)
+@[7-8](What to do if they match)
+@[9-10](What to do if they don't match)
+@[11](Close if statement)
+
 ---
 ### Conditional Handling
 *  if statement |
@@ -105,7 +130,8 @@ The read command can be used to stop a script at certain points for debugging. I
 +++
 ### if statement
 *  Uses a test with a binary output to determine path to take
--  Syntax
+-  Test operators - http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
+-  Arithmetic operators - -eq, -ne, -lt, -le, -gt or -ge
 ```bash
 if [[ test condition ]]
 then
@@ -275,7 +301,6 @@ esac
 +++
 ### select case to create menus
 *   Allows menus in your script
--   Syntax
 
 ```bash
 select <variable> in <list>
@@ -300,14 +325,48 @@ done
 @[7-9](The second clause. The result of menu number 2)
 @[10-12](The "catch all" clause. This happens if the user picks a non choice)
 @[13](Close your case statement)
+@[14](Close your select statement)
 
 ---
 ### Loops
-for
+- for loop |
+- while loop |
+- until loop |
 
-while
++++
+### for
+- Iterates through a list
+- Syntax
+```bash
+for i in <list>
+do
+  All the things
+done
+```
 
-until
+@[1-2](for statement. i = variable. <list> can be any list you can think of)
+@[3](What to do with each item in the list)
+@[4](Close loop)
+
++++
+### for loop example
+```
+for i in {1..5}
+do
+  echo ${i}
+done
+```
+
+@[1-2](for statement. i = variable. List is the number range 1 to 5)
+@[3](echo ${i} which is number 1 to 5)
+@[4](Close loop)
+
+
++++
+### while
+
++++
+### until
 
 ---
 ### Functions
