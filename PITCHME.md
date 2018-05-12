@@ -276,6 +276,7 @@ esac
 ### select case to create menus
 *   Allows menus in your script
 -   Syntax
+
 ```bash
 select <variable> in <list>
 do
@@ -291,6 +292,7 @@ do
       ;;
   esac
 done
+```
 
 @[1-2](select statement with variable and list)
 @[3](The case statement using the select variable)
