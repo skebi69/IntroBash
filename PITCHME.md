@@ -67,15 +67,13 @@ Source: https://github.com/skebi69/IntroBash
 ---
 ### User input
 #### Syntax
-```bash
-read variable
-``` 
 
 ```bash
 read <options> variable
 ``` 
 
-#### Options 
++++
+### Examples of p and s options 
 
   -p - Prompt 
 
@@ -87,7 +85,7 @@ echo ${NUM}
   -s - Supress output
 
 ```
-echo "Enter password "
+echo "Enter password: "
 read -s PASSW
 echo "${PASSW}"
 ```
@@ -119,13 +117,13 @@ fi
 
 ---
 ### Conditional Handling
-*  if statement |
+-  if statement |
 
-*  if else |
+-  if else |
 
-*  if elif |
+-  if elif |
 
-*  case |
+-  case |
 
 +++
 ### if statement
