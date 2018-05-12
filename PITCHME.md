@@ -135,6 +135,7 @@ fi
 +++
 ### if else statement
 *  Uses a test with a binary output to determine path to take
+*  Provides what to do if the condition is false
 -  Syntax
 ```bash
 if [[ test condition ]]
@@ -171,6 +172,7 @@ fi
 +++
 ### if elif statement
 *  Uses a test with a binary output to determine path to take
+*  Uses further tests to provide different paths
 -  Syntax
 ```bash
 if [[ test condition ]]
@@ -178,14 +180,14 @@ then
   Do lots of stuff
 elif [[ Second test condition ]]
   Do different stuff
-else [[ Third test condition ]]
+else
   Do different stuff
 fi
 ```
 @[1-2](The if statement and condition it is looking for)
 @[3](If the condition is true, run this command)
 @[4-5](If the first statement is false and this is true, do this stuff)
-@[6-7](If the first and second statements are false and this is true, do this stuff)
+@[6-7](If the first and second statements are false, do this stuff)
 @[8](Close out the if statement)
 
 +++
@@ -197,7 +199,7 @@ then
   echo "The answer is less than 1"
 elif [[ ${ANSW} -lt 5 ]]
   echo "The answer is less than 5"
-else [[ ${ANSW} -lt 10 ]]
+else
   echo "The answer is less than 10" 
 fi
 ```
@@ -208,11 +210,67 @@ fi
 @[7-8](If the first two conditions are NOT true, run this command)
 @[9](Close out the if statement)
 
-
 +++
 ### case statement
+*  Gives several different paths depending on the results of a single condition
+*  Can replace (and better than) nested if statements
+-  Syntax
+```bash
+case <expression> in
+  case1)
+    break
+    ;;
+  case2)
+    break
+    ;;
+  *)
+    break
+    ;;
+esac
+```
+@[1](expression is usually a variable that has been previously set)
+@[2-4](The first clause. "break" is needed to prevent endless case loop. ";;" terminates the clause)
+@[5-7](The second clause. "break" is needed to prevent endless case loop. ";;" terminates the clause)
+@[8-10](The "catch all" clause. This happens if none of the other clauses match)
+@[11](Close your case statement)
 
----
++++
+### Example of use
+```bash
+disk=`df -h | grep -v snap | awk '{print $5}' | grep % | grep -v Use | sort -n | tail -1 | cut -d "%" -f1 -`
+case ${disk} in
+[1-6]*)
+  echo="No disk issues here, move along"
+  break
+  ;;
+[7-8]*)
+  echo="There is a partition with ${disk}% space. Check it out..."
+  break
+  ;;
+9[0-8])
+  echo="Seriously...  One partition is ${disk}% full."
+  break
+  ;;
+99)
+  echo="Wake up and do something...There's a partition at ${disk}%!"
+  break
+  ;;
+*)
+  echo="W. T. F.!!!!"
+  break
+  ;;
+esac
+```
+
+@[1](Get a number)
+@[2](Case statement)
+@[3-6](Stanza 1)
+@[7-10](Stanza 2)
+@[11-14](Stanza 3)
+@[15-18](Stanza 4)
+@[19-22](Stanza 5 - Catch all)
+@[23](Close case)
++++
 ### select case to create menus
 
 
