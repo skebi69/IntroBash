@@ -66,9 +66,9 @@ Source: https://github.com/skebi69/IntroBash
 
 ---
 ### User input
-#### Syntax
+#### Syntax (read)
 
-```bash
+```ba(h
 read <options> variable
 ``` 
 
@@ -345,9 +345,9 @@ done
 
 @[1-2](Will cat file 1 and use that for menu choices)
 @[3](case statement for value of '${NUM}')
-@[4-7](Exit must come before * because it is defined)
-@[8-10](Do whatever to '${NUM}')
-@[11-12](Close case and select)
+@[4-6](Exit must come before * because it is defined)
+@[7-9](Do whatever to '${NUM}')
+@[10-11](Close case and select)
 
 ---
 ### Loops
