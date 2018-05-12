@@ -121,7 +121,7 @@ fi
 ```bash
 grep Hello *
 ANSW=$?
-if [[ $i{ANSW} -lt 1 ]]
+if [[ ${ANSW} -lt 1 ]]
 then
   echo "The command worked"
 fi
@@ -154,7 +154,7 @@ fi
 ```bash
 grep Hello *
 ANSW=$?
-if [[ $i{ANSW} -lt 1 ]]
+if [[ ${ANSW} -lt 1 ]]
 then
   echo "The command worked"
 else
@@ -162,8 +162,7 @@ else
 fi
 ```
 
-@[1](The command you are testing output from)
-@[2](Special variables can be very volitile so I usually create a "disposable" variable to hold them)
+@[1-2](The command you are testing output from and "disposable" variable)
 @[3-4](The if statement and condition it is looking for)
 @[5](If the condition is true, run this command)
 @[6-7](If the condition is NOT true, run this command)
@@ -171,6 +170,44 @@ fi
 
 +++
 ### if elif statement
+*  Uses a test with a binary output to determine path to take
+-  Syntax
+```bash
+if [[ test condition ]]
+then
+  Do lots of stuff
+elif [[ Second test condition ]]
+  Do different stuff
+else [[ Third test condition ]]
+  Do different stuff
+fi
+```
+@[1-2](The if statement and condition it is looking for)
+@[3](If the condition is true, run this command)
+@[4-5](If the first statement is false and this is true, do this stuff)
+@[6-7](If the first and second statements are false and this is true, do this stuff)
+@[8](Close out the if statement)
+
++++
+### Example of use
+```bash
+ANSW=6
+if [[ ${ANSW} -lt 1 ]]
+then
+  echo "The answer is less than 1"
+elif [[ ${ANSW} -lt 5 ]]
+  echo "The answer is less than 5"
+else [[ ${ANSW} -lt 10 ]]
+  echo "The answer is less than 10" 
+fi
+```
+
+@[1](Setting a variable)
+@[2-4](The if statement and condition it is looking for and what to do if true)
+@[5-6](The second statement and what to do if true)
+@[7-8](If the first two conditions are NOT true, run this command)
+@[9](Close out the if statement)
+
 
 +++
 ### case statement
