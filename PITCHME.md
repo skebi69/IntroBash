@@ -132,6 +132,8 @@ fi
 *  Uses a test with a binary output to determine path to take
 -  Test operators - http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
 -  Arithmetic operators - -eq, -ne, -lt, -le, -gt or -ge
++++
+### if statement syntax
 ```bash
 if [[ test condition ]]
 then
@@ -327,6 +329,28 @@ done
 @[13](Close your case statement)
 @[14](Close your select statement)
 
++++
+### Example
+```bash
+select NUM in $(cat file1) Exit
+do
+case ${NUM} in
+  Exit)
+    exit
+    ;;
+  *)
+    echo $NUM
+    ;;
+esac
+done
+```
+
+@[1-2](Will cat file 1 and use that for menu choices)
+@[3](case statement for value of '${NUM}')
+@[4-7](Exit must come before * because it is defined)
+@[8-10](Do whatever to '${NUM}')
+@[11-12](Close case and select)
+
 ---
 ### Loops
 - for loop |
@@ -361,12 +385,114 @@ done
 @[3](echo ${i} which is number 1 to 5)
 @[4](Close loop)
 
-
 +++
 ### while
+-  Performs actions while a condition is true
+```bash
+while [[ condtion ]]
+do
+  Do stuff
+done
+```
+
+@[1-2]()
+@[3]()
+@[4](Close the while loop)
+
++++
+### Example
+```bash
+x=0
+while [[ ${x} -lt 10 ]]
+do
+  echo ${x}
+  let x=${x}+1
+  sleep 1
+done
+```
+
+@[1](Set variable x to 0)
+@[2-3](Set condition that x cannot be 10 or more)
+@[4-6](Echo x, add 1 to x, sleep for 1 second)
+@[7](Close loop)
 
 +++
 ### until
+-Performs actions until a condition is true
+```bash
+while [[ condtion ]]
+do
+  Do stuff
+done
+```
+
+@[1-2]()
+@[3]()
+@[4](Close the until loop)
+
++++
+### Example
+```bash
+x=0
+until [[ ${x} -ge 10 ]]
+do
+  echo ${x}
+  let x=${x}+1
+  sleep 1
+done
+```
+
+@[1](Set variable x to 0)
+@[2-3](Set condition that x must be 10 or more)
+@[4-6](Echo x, add 1 to x, sleep for 1 second)
+@[7](Close loop)
 
 ---
 ### Functions
+-   Functions are reusable bits of code
+-   They cut down on file size by reducing repetition
+-   Must be defined in a script before they are called
+    -   Commonly all functions are defined at the very beginning of a script
+
++++
+### Syntax
+```bash
+function <name> {
+  Do all the things to $1
+}
+
+<name>
+<name> foobar
+```
+
+@[1-3](Defines the function)
+@[4](Calls the function)
+@[5](Calls the function and passes foobar as $1)
+
++++
+### another use for Functions
+-   Often times, if you have a series of commands you run often you can create a function file that gets called by .bashrc. This would be like alias command on steroids.
+
+---
+### Topics
+-   Why script? |
+-   She-Bang
+-   Variables |
+-   Special variables |
+-   User input |
+
++++
+### Topics (Cont)
+-   Conditional handling |
+-   Select/case text menu |
+-   Loops |
+-   Functions |
+
+---
+# Thanks.
+## Remember the new venue next month
+###  
+###  
+### Questions
+
+
