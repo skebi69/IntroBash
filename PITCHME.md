@@ -102,7 +102,7 @@ echo "Enter your password again: "
 read -s PASSWD2
 if [[ ${PASSWD1} == ${PASSWD2} ]]
 then
-  PASSWD=$PASSWD
+  PASSWD=$PASSWD1
   echo "Your password has been saved"
 else
   echo "The two passwords do not match, start over..."
@@ -393,8 +393,8 @@ do
 done
 ```
 
-@[1-2]()
-@[3]()
+@[1-2](while condition is true)
+@[3](Do stuff)
 @[4](Close the while loop)
 
 +++
@@ -410,7 +410,7 @@ done
 ```
 
 @[1](Set variable x to 0)
-@[2-3](Set condition that x cannot be 10 or more)
+@[2-3](Set condition to be true while x is less than 10)
 @[4-6](Echo x, add 1 to x, sleep for 1 second)
 @[7](Close loop)
 
@@ -418,7 +418,7 @@ done
 ### until
 -Performs actions until a condition is true
 ```bash
-while [[ condtion ]]
+until [[ condtion ]]
 do
   Do stuff
 done
@@ -447,10 +447,10 @@ done
 
 ---
 ### Functions
--   Functions are reusable bits of code
--   They cut down on file size by reducing repetition
--   Must be defined in a script before they are called
-    -   Commonly all functions are defined at the very beginning of a script
+-   Functions are reusable bits of code |
+-   They cut down on file size by reducing repetition |
+-   Must be defined in a script before they are called |
+    -   Usually all functions are defined at the very beginning of a script |
 
 +++
 ### Syntax
@@ -464,17 +464,17 @@ function <name> {
 ```
 
 @[1-3](Defines the function)
-@[4](Calls the function)
-@[5](Calls the function and passes foobar as $1)
+@[5](Calls the function)
+@[6](Calls the function and passes foobar as $1)
 
 +++
 ### another use for Functions
--   Often times, if you have a series of commands you run often you can create a function file that gets called by .bashrc. This would be like alias command on steroids.
+-   Often times, if you have a series of commands you run often you can create a function file that gets called by .bashrc. This would be like alias command on steroids. |
 
 ---
 ### Topics
 -   Why script? |
--   She-Bang
+-   She-Bang |
 -   Variables |
 -   Special variables |
 -   User input |
